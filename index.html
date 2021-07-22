@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    
+    <header class="logo"><img src="./assets/images/logo.svg" alt="logo" /></header>
+
+    <main>
+      <section class="tips-wrapper">
+        <div class="tips-container">
+          <h1>Bill</h1>
+
+          <form id="tipForm">
+            <label for="bill"></label>
+            <input type="text" name="bill" id="bill" placeholder="0.0" />
+
+            <h2>Select Tip %</h2>
+
+            <div class="percent-wrapper">
+              <div class="percentBtn">5%</div>
+              <div class="percentBtn">10%</div>
+              <div class="percentBtn btn-active">15%</div>
+              <div class="percentBtn">25%</div>
+              <div class="percentBtn">50%</div>
+              <input
+                type="text"
+                class="percentCustom"
+                name="inp-tip"
+                placeholder="Custom"
+                id="percentCustom"
+              />
+            </div>
+
+            <div class="numberPeople">
+              <div class="people-wrapper">
+                <h3>Number of People</h3>
+                <div class="error-msg">Can't be zero</div>
+              </div>
+              <label for="people"></label>
+              <input
+                type="text"
+                name="people"
+                id="people"
+                data-bill-people
+                placeholder="1"
+              />
+            </div>
+          </form>
+        </div>
+
+        <section class="output">
+          <div data-tip-amount class="tipAmount">
+            <div class="text-wrap">
+              <span class="text-white">Tip Amount</span>
+              <span class="text-gray">/ person</span>
+            </div>
+            <div class="screenValue">$0.0</div>
+          </div>
+          <div data-current-operand class="totalAmount">
+            <div class="text-wrap">
+              <span class="text-white">Total</span>
+              <span class="text-gray">/ person</span>
+            </div>
+            <div class="screenValue">$0.0</div>
+          </div>
+          <button class="resetBtn">RESET</button>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/Zepolimer?tab=repositories">Remi Lopez</a>.
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
